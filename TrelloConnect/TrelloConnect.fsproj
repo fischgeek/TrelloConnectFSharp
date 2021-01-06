@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net472</TargetFramework> 
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Samples\attachments.sample.json" />
+    <Content Include="Samples\cards.sample.json" />
+    <Content Include="Samples\card.sample.json" />
+    <Content Include="Samples\list.sample.json" />
+    <Content Include="Samples\lists.sample.json" />
+    <Content Include="Samples\board.sample.json" />
+    <Content Include="Samples\boards.sample.json" />
+    <Compile Include="Routes.fs" />
+    <Compile Include="Types.fs" />
+    <Compile Include="APICalls.fs" />
+    <Compile Include="Trello.fs" />
+    <Compile Include="Config.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FSharp.Data" Version="3.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+</Project>

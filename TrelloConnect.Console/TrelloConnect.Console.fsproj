@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net472</TargetFramework> 
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Samples\attachments.sample.json" />
+    <Content Include="Samples\card.sample.json" />
+    <Content Include="Samples\cards.sample.json" />
+    <Content Include="Samples\list.sample.json" />
+    <Content Include="Samples\lists.sample.json" />
+    <Content Include="Samples\board.sample.json" />
+    <Content Include="Samples\boards.sample.json" />
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup />
+
+  <ItemGroup>
+    <ProjectReference Include="..\TrelloConnect\TrelloConnect.fsproj" />
+  </ItemGroup>
+</Project>

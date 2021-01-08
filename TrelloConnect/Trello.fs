@@ -21,3 +21,4 @@ module Trello =
     let GetCardById cardId = Get (Routes.Card cardId) Types.ParseCard "Could not get card."
     let GetCardAttachments cardId = Get (Routes.CardAttachments cardId) Types.ParseAttachments "Could not get attachments."
     let UpdateCard cardId = ()
+    let MoveCard cardid = ()

@@ -38,6 +38,12 @@ module WebCalls =
     let HttpGet (x:HttpRequestBuilder) = 
         Http.Request(url = x.Url, query = x.Query, headers = x.Headers, httpMethod = "get") |> ReturnResponse
 
+    let HttpPut (x:HttpRequestBuilder) = 
+        Http.Request(url = x.Url, query = x.Query, headers = x.Headers, httpMethod = "put") |> ReturnResponse
+
+    let HttpDel (x:HttpRequestBuilder) = 
+        Http.Request(url = x.Url, query = x.Query, headers = x.Headers, httpMethod = "delete") |> ReturnResponse
+
     let Post url (username: string) jsonBody=
         Http.Request
             (url,

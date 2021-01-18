@@ -22,5 +22,5 @@ module Trello =
     let GetCards listId = Get (Routes.Cards listId) Types.ParseCards "Could not get cards."
     let GetCardById cardId = Get (Routes.Card cardId) Types.ParseCard "Could not get card."
     let GetCardAttachments cardId = Get (Routes.CardAttachments cardId) Types.ParseAttachments "Could not get attachments."
-    let DeleteCard cardId = Del (Routes.Card cardId) (fun x -> "") "Failed to delete card."
-    let ArchiveCard cardId = Put (Routes.ArchiveCard cardId) (fun x -> "") "Failed to archive card."
+    let DeleteCard cardId = Del (Routes.Card cardId) ignore "Failed to delete card."
+    let ArchiveCard cardId = Put (Routes.ArchiveCard cardId) (fun _ -> ()) "Failed to archive card."

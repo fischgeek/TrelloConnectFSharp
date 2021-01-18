@@ -14,6 +14,7 @@
     <Content Include="Samples\lists.sample.json" />
     <Content Include="Samples\board.sample.json" />
     <Content Include="Samples\boards.sample.json" />
+    <Compile Include="Pipes.fs" />
     <Compile Include="Routes.fs" />
     <Compile Include="Types.fs" />
     <Compile Include="APICalls.fs" />

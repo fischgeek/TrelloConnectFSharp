@@ -43,6 +43,9 @@ module Main =
         let c = Trello.GetCardById cardId
         outData c.Id c.Name
 
+        outTitle "Get card created date" cardId
+        outData "Date created: " ((Pipes.CardPipe.CreatedDate c.Id).ToString("yyyy-M-d"))
+
         outTitle "Get attachements on a card" cardId
         let attachments = Trello.GetCardAttachments cardId
         outData "attachments" (attachments.Length.ToString())
